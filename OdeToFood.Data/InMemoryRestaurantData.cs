@@ -21,9 +21,11 @@ namespace OdeToFood.Data
 
         #region Implementation of IRestaurantData
 
-        public IEnumerable<Restaurant> GetAll()
+        public IEnumerable<Restaurant> GetRestaurantsByName(string name = null)
         {
-            return _restaurants.OrderBy(r => r.Name);
+            return _restaurants
+                       .Where(s => string.IsNullOrEmpty(name) || s.Name.Contains(name))
+                       .OrderBy(r => r.Name);
         }
 
         #endregion
