@@ -33,6 +33,25 @@ namespace OdeToFood.Data
             return _restaurants.Find(r => r.Id.Equals(id));
         }
 
+        public Restaurant Update(Restaurant updatedRestaurant)
+        {
+            var restaurant = _restaurants.Find(r => r.Id.Equals(updatedRestaurant.Id));
+            if (restaurant != null)
+            {
+                restaurant.Name = updatedRestaurant.Name;
+                restaurant.Location = updatedRestaurant.Location;
+                restaurant.CuisineType = updatedRestaurant.CuisineType;
+            }
+            return restaurant;
+        }
+
+        public Restaurant Add(Restaurant newRestaurant)
+        {
+            _restaurants.Add(newRestaurant);
+            newRestaurant.Id = _restaurants.Max(r => r.Id) + 1;
+            return newRestaurant;
+        }
+
         #endregion
     }
 }
