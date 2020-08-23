@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using OdeToFood.Core;
+using OdeToFood.Domain;
 
-namespace OdeToFood.Data
+namespace OdeToFood.Core
 {
     public class InMemoryRestaurantData : IRestaurantData
     {
@@ -50,6 +50,21 @@ namespace OdeToFood.Data
             _restaurants.Add(newRestaurant);
             newRestaurant.Id = _restaurants.Max(r => r.Id) + 1;
             return newRestaurant;
+        }
+
+        public Restaurant Delete(int id)
+        {
+            var restaurant = _restaurants.Find(r => r.Id.Equals(id));
+            if (restaurant != null)
+            {
+                _restaurants.Remove(restaurant);
+            }
+            return restaurant;
+        }
+
+        public int Commit()
+        {
+            return 0;
         }
 
         #endregion

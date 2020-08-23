@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace OdeToFood.Core
+namespace OdeToFood.Domain
 {
     public class Restaurant
     {

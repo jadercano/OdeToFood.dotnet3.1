@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using OdeToFood.Core;
-using OdeToFood.Data;
+using OdeToFood.Domain;
 
 namespace OdeToFood.Web.Pages.Restaurants
 {
@@ -46,6 +46,7 @@ namespace OdeToFood.Web.Pages.Restaurants
             }
 
             Restaurant = Restaurant.Id > 0 ? _restaurantData.Update(Restaurant) : _restaurantData.Add(Restaurant);
+            _restaurantData.Commit();
             TempData["Message"] = "Restaurant Saved!";
             return RedirectToPage("./Detail", new { restaurantId = Restaurant.Id });
         }
