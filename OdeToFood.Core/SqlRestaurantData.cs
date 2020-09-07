@@ -58,6 +58,11 @@ namespace OdeToFood.Core
             return _context.SaveChanges();
         }
 
+        public int Count()
+        {
+            return _context.Restaurants.Count();
+        }
+
         #endregion
     }
 }

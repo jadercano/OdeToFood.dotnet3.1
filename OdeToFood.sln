@@ -5,11 +5,11 @@ VisualStudioVersion = 16.0.30330.147
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OdeToFood.Web", "OdeToFood.Web\OdeToFood.Web.csproj", "{D8E18572-D000-45A4-B8C9-27B808DD2C09}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdeToFood.Core", "OdeToFood.Core\OdeToFood.Core.csproj", "{F10C9512-EA13-4D27-8020-0300236FEB9F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OdeToFood.Core", "OdeToFood.Core\OdeToFood.Core.csproj", "{F10C9512-EA13-4D27-8020-0300236FEB9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdeToFood.Data", "OdeToFood.Data\OdeToFood.Data.csproj", "{FDB2F7D8-C7C0-452C-AA9D-B2C7F3E0253A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OdeToFood.Data", "OdeToFood.Data\OdeToFood.Data.csproj", "{FDB2F7D8-C7C0-452C-AA9D-B2C7F3E0253A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdeToFood.Domain", "OdeToFood.Domain\OdeToFood.Domain.csproj", "{307C2C6D-42BF-4B5B-810A-FEF3AAD95265}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OdeToFood.Domain", "OdeToFood.Domain\OdeToFood.Domain.csproj", "{307C2C6D-42BF-4B5B-810A-FEF3AAD95265}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

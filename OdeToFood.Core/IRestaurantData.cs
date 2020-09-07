@@ -17,6 +17,8 @@ namespace OdeToFood.Core
 
         Restaurant Delete(int id);
 
+        int Count();
+
         int Commit();
     }
 }
